@@ -14,7 +14,7 @@ function prompt {
 Remove-Item Alias:nv -Force
 Set-Alias nv nvim
 
-if (-not (Test-Path _vimrc)) {
+if (-not (Test-Path "~/_vimrc")) {
     New-Item -ItemType HardLink -Path _vimrc -Target .dotfiles\.vimrc
 }
 
