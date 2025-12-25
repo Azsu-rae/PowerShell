@@ -14,6 +14,8 @@ function prompt {
 Remove-Item Alias:nv -Force
 Set-Alias nv nvim
 
+New-Item -ItemType SymbolicLink -Path _vimrc -Target .dotfiles\.vimrc
+
 function tree {
     $ignoreFile = ".gitignore"
     $argsList = @()
